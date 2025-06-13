@@ -1,16 +1,35 @@
 import React, { useState } from 'react';
 import data from '../Socialch1.json';
 import { useDarkMode } from '../DarkModeContext';
+import { useNavigate } from 'react-router-dom';
 
-function getRandomQuestions(mcqs, count = 10) {
-  const shuffled = [...mcqs].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, count);
+// Helper to get random N items from an array
+function getRandomItems(arr, n) {
+  const shuffled = [...arr].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, n);
+}
+
+// New logic: get 3 easy, 4 medium, 3 hard questions
+function getRandomQuestionsByDifficulty(mcqs) {
+  const easy = mcqs.filter(q => (q.difficulty || '').toLowerCase() === 'easy');
+  const medium = mcqs.filter(q => (q.difficulty || '').toLowerCase() === 'medium');
+  const hard = mcqs.filter(q => (q.difficulty || '').toLowerCase() === 'hard');
+
+  // Fallback to as many as available if not enough in a category
+  const easyQs = getRandomItems(easy, Math.min(3, easy.length));
+  const mediumQs = getRandomItems(medium, Math.min(4, medium.length));
+  const hardQs = getRandomItems(hard, Math.min(3, hard.length));
+
+  // Combine and shuffle the final set
+  const combined = [...easyQs, ...mediumQs, ...hardQs].sort(() => 0.5 - Math.random());
+  return combined;
 }
 
 const QUESTIONS_KEY = 'quiz_questions';
 
 function Quiz() {
   const { dark } = useDarkMode();
+  const navigate = useNavigate();
   const hasQuestions = Array.isArray(data.MCQs) && data.MCQs.length >= 1;
 
   // Load from localStorage or generate new
@@ -23,7 +42,7 @@ function Quiz() {
         // fallback to new questions if parse fails
       }
     }
-    const newQuestions = hasQuestions ? getRandomQuestions(data.MCQs, Math.min(10, data.MCQs.length)) : [];
+    const newQuestions = hasQuestions ? getRandomQuestionsByDifficulty(data.MCQs) : [];
     localStorage.setItem(QUESTIONS_KEY, JSON.stringify(newQuestions));
     return newQuestions;
   };
@@ -44,7 +63,7 @@ function Quiz() {
   const allAnswered = questions.length > 0 && questions.every((_, idx) => selected[idx] !== undefined);
 
   const handleTryAgain = () => {
-    const newQuestions = getRandomQuestions(data.MCQs, Math.min(10, data.MCQs.length));
+    const newQuestions = getRandomQuestionsByDifficulty(data.MCQs);
     setQuestions(newQuestions);
     setSelected({});
     setShowAnswers(false);
@@ -133,12 +152,20 @@ function Quiz() {
           </button>
         )}
         {showAnswers && (
-          <button
-            className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded mt-4"
-            onClick={handleTryAgain}
-          >
-            Try Again
-          </button>
+          <div className="flex gap-4">
+            <button
+              className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded mt-4"
+              onClick={handleTryAgain}
+            >
+              Try Again
+            </button>
+            <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded mt-4"
+              onClick={() => navigate('/')}
+            >
+              Back to Home
+            </button>
+          </div>
         )}
       </div>
     </div>

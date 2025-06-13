@@ -5,7 +5,7 @@ function Chapters() {
   const navigate = useNavigate();
   const { dark } = useDarkMode();
 
-  // Updated list of chapter names
+  //List of chapter names
   const chapterNames = [
     "India: Relief Features",
     "Ideas of Development",
@@ -48,7 +48,7 @@ function Chapters() {
                 ? 'bg-green-700 hover:bg-green-800 text-white'
                 : 'bg-green-500 hover:bg-green-700 text-white'
               }`}
-            onClick={() => i === 0 && navigate('/quiz/1')}
+            onClick={() => i === 0 && navigate('/chapter/1')}
           >
             {i + 1}. {name}
           </button>

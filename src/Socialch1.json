@@ -1,54 +1,38 @@
 {
-  "Summary": [
-    "India has many physical features like mountains, plains, plateaus, deserts, coasts, and islands, called relief features.",
-    "India is located between 8°N and 37°N latitude and 68°E and 97°E longitude, making it a peninsula surrounded by water on three sides.",
-    "The Indian Standard Time (IST) is based on the 82°30’E longitude near Allahabad, 5.5 hours ahead of Greenwich Mean Time.",
-    "India was part of Gondwana land millions of years ago, which split and moved to form the Himalayas by colliding with the Eurasian Plate.",
-    "The Himalayas are young mountains with three ranges: Greater Himalayas (Himadri), Middle Himalayas (Himachal), and Shiwalik (outer range).",
-    "The Indo-Gangetic Plain was formed by sediments from Himalayan rivers like Indus, Ganga, and Brahmaputra, making it very fertile.",
-    "The Peninsular Plateau is an old landmass with the Central Highlands (Malwa) and Deccan Plateau, rich in minerals.",
-    "The Western Ghats and Eastern Ghats border the Deccan Plateau; Western Ghats are higher and continuous, while Eastern Ghats are broken.",
-    "The Thar Desert in Rajasthan is dry with little rain and sandy plains; the Luni River flows here but often dries up.",
-    "Coastal plains are narrow in the west (Konkan, Canara, Malabar) and wide in the east (Utkal, Circar, Coromandel), formed by rivers like Godavari.",
-    "India has two island groups: Andaman and Nicobar (volcanic origin) in the Bay of Bengal and Lakshadweep (coral origin) in the Arabian Sea.",
-    "The Himalayas protect India from cold winds, cause monsoon rains, and provide water for farming through perennial rivers."
+    "Summary": [
+    "India has many types of landforms called relief features, like mountains, plains, plateaus, deserts, coasts, and islands.",
+    "India is located in the northern hemisphere, between 8°N and 37°N latitude and 68°E and 97°E longitude, with a long coastline along the Indian Ocean.",
+    "The Indian peninsula is surrounded by water on three sides, which helps with trade and fishing and supports diverse crops and vegetation.",
+    "India’s standard time is set by the 82°30’E longitude near Allahabad, which is 5.5 hours ahead of Greenwich Mean Time (GMT).",
+    "Long ago, India was part of Gondwana land, which broke apart, and the Indian plate collided with the Eurasian plate, forming the Himalayas.",
+    "The Himalayas are young mountains formed by the folding of the Earth’s crust and include three ranges: Greater Himalayas, Middle Himalayas, and Shiwalik.",
+    "The Greater Himalayas have high peaks like Kanchenjunga, with glaciers that feed perennial rivers.",
+    "The Middle Himalayas have hill stations like Shimla and Mussoorie, with ranges like Pir Panjal and Nag Tiba.",
+    "The Shiwalik range is the outermost Himalaya, with plains called Duns and Duars formed by river sediments.",
+    "The Purvanchal hills in the northeast include Patkai, Naga, and Mizo hills, marking India’s eastern boundary.",
+    "The Indo-Gangetic Plain, formed by rivers like the Indus, Ganga, and Brahmaputra, is flat and fertile, ideal for farming.",
+    "The Peninsular Plateau, made of old rocks, has two parts: the Central Highlands (Malwa) and the Deccan Plateau, with minerals and black soil.",
+    "The Western Ghats are higher and continuous, while the Eastern Ghats are lower and broken by rivers like Godavari and Krishna.",
+    "The Thar Desert in Rajasthan is dry with little rain, sandy plains, and the Luni River that doesn’t reach the sea.",
+    "The Coastal Plains include the narrow western coast (Konkan, Canara, Malabar) and wider eastern coast (Utkal, Circar, Coromandel), with fertile deltas.",
+    "India has two island groups: Andaman and Nicobar (volcanic origins) in the Bay of Bengal and Lakshadweep (coral origins) in the Arabian Sea.",
+    "The Himalayas influence India’s climate by blocking cold winds and causing monsoon rains, making the plains fertile."
   ],
   "MCQs": [
     {
-      "question": "What are relief features?",
-      "options": {
-        "A": "Man-made structures",
-        "B": "Physical features like mountains and plains",
-        "C": "Types of crops",
-        "D": "Weather patterns"
-      },
-      "answer": "B",
-      "explanation": "Relief features are natural physical features of the land, such as mountains, plains, and plateaus."
-    },
-    {
-      "question": "What is the shape of India’s landmass called?",
-      "options": {
-        "A": "Island",
-        "B": "Peninsula",
-        "C": "Desert",
-        "D": "Plateau"
-      },
-      "answer": "B",
-      "explanation": "India is called a peninsula because it is surrounded by water on three sides."
-    },
-    {
-      "question": "Which mountain range is the northernmost in the Himalayas?",
+      "question": "What is the name of the highest mountain range in the Himalayas?",
       "options": {
         "A": "Shiwalik",
-        "B": "Himachal",
-        "C": "Himadri",
+        "B": "Greater Himalayas",
+        "C": "Middle Himalayas",
         "D": "Purvanchal"
       },
-      "answer": "C",
-      "explanation": "Himadri, or Greater Himalayas, is the northernmost range with the highest peaks."
+      "answer": "B",
+      "explanation": "The Greater Himalayas, also called Himadri, is the highest range with peaks averaging 6100 meters above sea level.",
+      "difficulty": "easy"
     },
     {
-      "question": "Which river is found in the Thar Desert?",
+      "question": "Which river is the only one found in the Thar Desert?",
       "options": {
         "A": "Ganga",
         "B": "Luni",
@@ -56,294 +40,344 @@
         "D": "Brahmaputra"
       },
       "answer": "B",
-      "explanation": "The Luni River flows through the Thar Desert but often dries up."
+      "explanation": "The Luni River is the only river in the Thar Desert, and it does not reach the sea.",
+      "difficulty": "easy"
     },
     {
-      "question": "What is the name of the plains formed by the Ganga River?",
+      "question": "What is the southernmost tip of India called?",
       "options": {
-        "A": "Indo-Gangetic Plain",
-        "B": "Coastal Plain",
-        "C": "Thar Desert",
-        "D": "Deccan Plateau"
+        "A": "Indira Point",
+        "B": "Kanyakumari",
+        "C": "Rann of Kutch",
+        "D": "Chilka Lake"
       },
       "answer": "A",
-      "explanation": "The Indo-Gangetic Plain is formed by the Ganga and other Himalayan rivers."
+      "explanation": "Indira Point in the Nicobar Islands is the southernmost tip of India.",
+      "difficulty": "easy"
     },
     {
-      "question": "Which island group is made of coral?",
+      "question": "Which ocean surrounds the Indian peninsula on three sides?",
+      "options": {
+        "A": "Pacific Ocean",
+        "B": "Atlantic Ocean",
+        "C": "Indian Ocean",
+        "D": "Arctic Ocean"
+      },
+      "answer": "C",
+      "explanation": "The Indian peninsula is surrounded by the Indian Ocean, which supports trade and fishing.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which island group is made of coral reefs?",
       "options": {
         "A": "Andaman and Nicobar",
         "B": "Lakshadweep",
-        "C": "Sri Lanka",
-        "D": "Maldives"
+        "C": "Maldives",
+        "D": "Sri Lanka"
       },
       "answer": "B",
-      "explanation": "Lakshadweep Islands are formed from coral reefs in the Arabian Sea."
+      "explanation": "Lakshadweep Islands in the Arabian Sea are formed from coral reefs.",
+      "difficulty": "easy"
     },
     {
-      "question": "What is the highest peak in South India?",
+      "question": "What is the name of the fertile plain formed by the Ganga River?",
       "options": {
-        "A": "K2",
-        "B": "Anaimudi",
-        "C": "Kanchenjunga",
-        "D": "Nanga Parbat"
+        "A": "Thar Desert",
+        "B": "Ganga Plain",
+        "C": "Deccan Plateau",
+        "D": "Malwa Plateau"
       },
       "answer": "B",
-      "explanation": "Anaimudi, in the Western Ghats, is the highest peak in South India at 2,695 meters."
-    },
-    {
-      "question": "Which coast is part of the western coastal plain?",
-      "options": {
-        "A": "Coromandel",
-        "B": "Malabar",
-        "C": "Circar",
-        "D": "Utkal"
-      },
-      "answer": "B",
-      "explanation": "The Malabar Coast is the southern part of the western coastal plain in Kerala."
-    },
-    {
-      "question": "What is the Indian Standard Time based on?",
-      "options": {
-        "A": "68°E longitude",
-        "B": "82°30’E longitude",
-        "C": "97°E longitude",
-        "D": "50°N latitude"
-      },
-      "answer": "B",
-      "explanation": "Indian Standard Time is based on the 82°30’E longitude near Allahabad."
-    },
-    {
-      "question": "Which plateau is rich in minerals?",
-      "options": {
-        "A": "Tibetan Plateau",
-        "B": "Chotanagpur Plateau",
-        "C": "Malwa Plateau",
-        "D": "Deccan Plateau"
-      },
-      "answer": "B",
-      "explanation": "The Chotanagpur Plateau is known for its large deposits of minerals."
-    },
-    {
-      "question": "What process formed the Himalayas millions of years ago?",
-      "options": {
-        "A": "Volcanic eruption",
-        "B": "Collision of Indian and Eurasian plates",
-        "C": "Erosion by rivers",
-        "D": "Deposition of sediments"
-      },
-      "answer": "B",
-      "explanation": "The Himalayas formed when the Indian plate collided with the Eurasian plate, causing folding."
-    },
-    {
-      "question": "Which Himalayan range is known as the outer Himalayas?",
-      "options": {
-        "A": "Himadri",
-        "B": "Himachal",
-        "C": "Shiwalik",
-        "D": "Purvanchal"
-      },
-      "answer": "C",
-      "explanation": "The Shiwalik Range is the outermost and youngest range of the Himalayas."
-    },
-    {
-      "question": "What is the name of the fertile region formed by rivers like Godavari and Krishna?",
-      "options": {
-        "A": "Indo-Gangetic Plain",
-        "B": "Eastern Coastal Plain",
-        "C": "Thar Desert",
-        "D": "Western Coastal Plain"
-      },
-      "answer": "B",
-      "explanation": "The Eastern Coastal Plain is fertile due to deltas formed by rivers like Godavari and Krishna."
-    },
-    {
-      "question": "Why do the Himalayas cause monsoon rains in India?",
-      "options": {
-        "A": "They block cold winds",
-        "B": "They force moist air to rise and cool",
-        "C": "They create deserts",
-        "D": "They stop rivers"
-      },
-      "answer": "B",
-      "explanation": "The Himalayas force moist air from the sea to rise, cool, and form rain clouds."
-    },
-    {
-      "question": "What is the ‘Bhabar’ region in the Indo-Gangetic Plain?",
-      "options": {
-        "A": "A swampy area",
-        "B": "A belt of gravel and pebbles",
-        "C": "A fertile plain",
-        "D": "A desert"
-      },
-      "answer": "B",
-      "explanation": "Bhabar is a narrow belt of gravel and pebbles deposited by Himalayan rivers."
+      "explanation": "The Ganga Plain is a fertile area in the Indo-Gangetic Plain, formed by the Ganga and its tributaries.",
+      "difficulty": "easy"
     },
     {
       "question": "Which hill station is located in the Middle Himalayas?",
       "options": {
-        "A": "Ooty",
-        "B": "Mussoorie",
-        "C": "Kanyakumari",
-        "D": "Indira Point"
+        "A": "Mumbai",
+        "B": "Shimla",
+        "C": "Chennai",
+        "D": "Kolkata"
       },
       "answer": "B",
-      "explanation": "Mussoorie is a hill station in the Middle Himalayas, at about 2,000 meters."
+      "explanation": "Shimla is a popular hill station in the Middle Himalayas, known for its pleasant climate.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the name of the plateau surrounded by the sea on three sides?",
+      "options": {
+        "A": "Himalayas",
+        "B": "Indo-Gangetic Plain",
+        "C": "Peninsular Plateau",
+        "D": "Thar Desert"
+      },
+      "answer": "C",
+      "explanation": "The Peninsular Plateau is surrounded by the sea on three sides, forming the Indian peninsula.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which range is also called the Outer Himalayas?",
+      "options": {
+        "A": "Greater Himalayas",
+        "B": "Shiwalik",
+        "C": "Pir Panjal",
+        "D": "Nag Tiba"
+      },
+      "answer": "B",
+      "explanation": "The Shiwalik range is the outermost part of the Himalayas, also called the Outer Himalayas.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which state has the Thar Desert?",
+      "options": {
+        "A": "Kerala",
+        "B": "Rajasthan",
+        "C": "Assam",
+        "D": "Telangana"
+      },
+      "answer": "B",
+      "explanation": "The Thar Desert is located in Rajasthan, known for its sandy plains and low rainfall.",
+      "difficulty": "easy"
+    },
+    {
+      "question": "Why is India called a peninsula?",
+      "options": {
+        "A": "It is surrounded by mountains",
+        "B": "It is surrounded by water on three sides",
+        "C": "It has many rivers",
+        "D": "It has a desert"
+      },
+      "answer": "B",
+      "explanation": "India is called a peninsula because it is surrounded by the Indian Ocean on three sides: south, east, and west.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the main reason the Himalayas have perennial rivers?",
+      "options": {
+        "A": "Heavy rainfall",
+        "B": "Glaciers and snow",
+        "C": "Underground springs",
+        "D": "Lakes in the valleys"
+      },
+      "answer": "B",
+      "explanation": "Glaciers and snow in the Greater Himalayas melt to provide a continuous water supply to perennial rivers.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which part of the Indo-Gangetic Plain is formed by the Indus River?",
+      "options": {
+        "A": "Eastern Part",
+        "B": "Central Part",
+        "C": "Western Part",
+        "D": "Southern Part"
+      },
+      "answer": "C",
+      "explanation": "The Western Part of the Indo-Gangetic Plain is formed by the Indus and its tributaries, mainly in Pakistan and parts of Punjab.",
+      "difficulty": "medium"
     },
     {
       "question": "What type of rocks make up the Peninsular Plateau?",
       "options": {
-        "A": "Sedimentary",
-        "B": "Crystalline and igneous",
-        "C": "Soft clay",
-        "D": "Volcanic ash"
+        "A": "Soft sedimentary rocks",
+        "B": "Old crystalline and igneous rocks",
+        "C": "New volcanic rocks",
+        "D": "Loose sandy rocks"
       },
       "answer": "B",
-      "explanation": "The Peninsular Plateau is made of old crystalline, igneous, and metamorphic rocks."
+      "explanation": "The Peninsular Plateau is made of old crystalline, igneous, and metamorphic rocks, which are rich in minerals.",
+      "difficulty": "medium"
     },
     {
-      "question": "Which river forms the eastern part of the Indo-Gangetic Plain?",
+      "question": "What is the name of the plains formed by sediments in the Shiwalik range?",
       "options": {
-        "A": "Indus",
-        "B": "Ganga",
-        "C": "Brahmaputra",
-        "D": "Godavari"
-      },
-      "answer": "C",
-      "explanation": "The Brahmaputra River forms the eastern part of the Indo-Gangetic Plain in Assam."
-    },
-    {
-      "question": "What is special about Indira Point?",
-      "options": {
-        "A": "It’s the highest peak",
-        "B": "It’s India’s southernmost point",
-        "C": "It’s a desert",
-        "D": "It’s a plateau"
+        "A": "Terai",
+        "B": "Duns",
+        "C": "Bhabar",
+        "D": "Doab"
       },
       "answer": "B",
-      "explanation": "Indira Point in the Nicobar Islands is the southernmost point of India."
+      "explanation": "Duns are plains formed by river sediments in the Shiwalik range, like Dehradun.",
+      "difficulty": "medium"
     },
     {
       "question": "Which range in the Middle Himalayas is the longest in Kashmir?",
       "options": {
-        "A": "Pir Panjal",
-        "B": "Mussoorie",
-        "C": "Nag Tiba",
+        "A": "Nag Tiba",
+        "B": "Pir Panjal",
+        "C": "Mussoorie",
         "D": "Zaskar"
       },
-      "answer": "A",
-      "explanation": "The Pir Panjal Range is the longest and most important in Kashmir."
-    },
-    {
-      "question": "Why does the Indo-Gangetic Plain have a high population density?",
-      "options": {
-        "A": "It has many deserts",
-        "B": "It has fertile soil from river sediments",
-        "C": "It is covered with forests",
-        "D": "It has high mountains"
-      },
       "answer": "B",
-      "explanation": "The plain’s fertile soil from Himalayan rivers supports agriculture, attracting many people."
+      "explanation": "The Pir Panjal range is the longest and most important range in the Middle Himalayas in Kashmir.",
+      "difficulty": "medium"
     },
     {
-      "question": "What is the ‘Terai’ region in the Indo-Gangetic Plain?",
+      "question": "What is the highest peak in the Western Ghats?",
       "options": {
-        "A": "A dry desert",
-        "B": "A swampy area below Bhabar",
-        "C": "A high plateau",
-        "D": "A coastal delta"
-      },
-      "answer": "B",
-      "explanation": "Terai is a swampy, marshy region below the Bhabar, formed by reappearing rivers."
-    },
-    {
-      "question": "Which hills are part of the Purvanchal in the eastern Himalayas?",
-      "options": {
-        "A": "Aravali Hills",
-        "B": "Patkai and Naga Hills",
-        "C": "Vindhya Hills",
-        "D": "Western Ghats"
-      },
-      "answer": "B",
-      "explanation": "Purvanchal includes Patkai, Naga, Manipuri, Khasi, and Mizo hills in the northeast."
-    },
-    {
-      "question": "How do Western and Eastern Coastal Plains differ in width?",
-      "options": {
-        "A": "Western is wider",
-        "B": "Eastern is wider",
-        "C": "Both are the same",
-        "D": "Neither has plains"
-      },
-      "answer": "B",
-      "explanation": "Eastern Coastal Plains are wider due to large river deltas, unlike the narrow Western Plains."
-    },
-    {
-      "question": "What is the geological origin of the Andaman and Nicobar Islands?",
-      "options": {
-        "A": "Coral reefs",
-        "B": "Volcanic activity",
-        "C": "River sediments",
-        "D": "Glacial deposits"
-      },
-      "answer": "B",
-      "explanation": "Andaman and Nicobar Islands are elevated parts of submerged mountains with volcanic origins."
-    },
-    {
-      "question": "Why is agriculture less developed in plateau regions compared to plains?",
-      "options": {
-        "A": "Plateaus have more rain",
-        "B": "Plateaus have non-perennial rivers",
-        "C": "Plateaus are too fertile",
-        "D": "Plateaus are flat"
-      },
-      "answer": "B",
-      "explanation": "Plateau rivers are not perennial, and the land is less fertile, limiting agriculture."
-    },
-    {
-      "question": "What feature of the Shiwalik Range caused the formation of Duns?",
-      "options": {
-        "A": "High peaks",
-        "B": "Blocking river flow",
-        "C": "Volcanic activity",
-        "D": "Coral formation"
-      },
-      "answer": "B",
-      "explanation": "The Shiwalik Range blocked rivers, forming lakes that left behind plains called Duns."
-    },
-    {
-      "question": "Which plateau lies north of the river Narmada?",
-      "options": {
-        "A": "Deccan Plateau",
-        "B": "Malwa Plateau",
-        "C": "Tibetan Plateau",
-        "D": "Chotanagpur Plateau"
-      },
-      "answer": "B",
-      "explanation": "The Malwa Plateau, part of the Central Highlands, lies north of the Narmada River."
-    },
-    {
-      "question": "How do the Himalayas protect India’s climate?",
-      "options": {
-        "A": "They block monsoon rains",
-        "B": "They stop cold winds from Central Asia",
-        "C": "They create deserts",
-        "D": "They reduce river flow"
-      },
-      "answer": "B",
-      "explanation": "The Himalayas act as a barrier, blocking cold winds from Central Asia during winter."
-    },
-    {
-      "question": "What is the highest peak in the Eastern Ghats?",
-      "options": {
-        "A": "Anaimudi",
-        "B": "Doda Betta",
-        "C": "Aroma Konda",
+        "A": "Aroma Konda",
+        "B": "Anaimudi",
+        "C": "Doda Betta",
         "D": "Kanchenjunga"
       },
+      "answer": "B",
+      "explanation": "Anaimudi in the Annamalai hills is the highest peak in the Western Ghats, at 2695 meters.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which coast is wider: Western or Eastern?",
+      "options": {
+        "A": "Western Coast",
+        "B": "Eastern Coast",
+        "C": "Both are equal",
+        "D": "Neither has a coast"
+      },
+      "answer": "B",
+      "explanation": "The Eastern Coast along the Bay of Bengal is wider than the narrow Western Coast along the Arabian Sea.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the standard meridian used for Indian Standard Time?",
+      "options": {
+        "A": "68°E",
+        "B": "82°30’E",
+        "C": "97°E",
+        "D": "50°E"
+      },
+      "answer": "B",
+      "explanation": "The 82°30’E longitude near Allahabad is the standard meridian for Indian Standard Time, 5.5 hours ahead of GMT.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which islands have volcanic origins?",
+      "options": {
+        "A": "Lakshadweep",
+        "B": "Andaman and Nicobar",
+        "C": "Sri Lanka",
+        "D": "Maldives"
+      },
+      "answer": "B",
+      "explanation": "The Andaman and Nicobar Islands have volcanic origins, with islands like Narkondam and Barren being volcanic.",
+      "difficulty": "medium"
+    },
+    {
+      "question": "How did the collision of the Indian plate with the Eurasian plate affect India’s landforms?",
+      "options": {
+        "A": "It formed the Thar Desert",
+        "B": "It created the Himalayas",
+        "C": "It formed the Coastal Plains",
+        "D": "It created the Lakshadweep Islands"
+      },
+      "answer": "B",
+      "explanation": "The collision of the Indian plate with the Eurasian plate caused folding, forming the Himalayas millions of years ago.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Why does the Indo-Gangetic Plain support a high population density?",
+      "options": {
+        "A": "It has many mountains",
+        "B": "It is very dry and sandy",
+        "C": "It has fertile soil from river sediments",
+        "D": "It has a cold climate"
+      },
       "answer": "C",
-      "explanation": "Aroma Konda, at 1,680 meters in Andhra Pradesh, is the highest peak in the Eastern Ghats."
+      "explanation": "The Indo-Gangetic Plain has fertile soil from Himalayan river sediments, making it ideal for farming and supporting a large population.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "How do the Himalayas influence India’s climate?",
+      "options": {
+        "A": "They make the entire country dry",
+        "B": "They block cold winds and cause monsoon rains",
+        "C": "They cause heavy snowfall everywhere",
+        "D": "They prevent any rainfall in India"
+      },
+      "answer": "B",
+      "explanation": "The Himalayas block cold winds from Central Asia and cause monsoon rains, creating a favorable climate for agriculture.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the main difference between the Western and Eastern Ghats?",
+      "options": {
+        "A": "Western Ghats are lower and discontinuous",
+        "B": "Eastern Ghats are higher and continuous",
+        "C": "Western Ghats are higher and continuous",
+        "D": "Both are the same height and structure"
+      },
+      "answer": "C",
+      "explanation": "The Western Ghats are higher (up to 2695 m) and continuous, while the Eastern Ghats are lower (up to 1680 m) and broken by rivers.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Why is the Peninsular Plateau less suitable for agriculture compared to the Indo-Gangetic Plain?",
+      "options": {
+        "A": "It has too many rivers",
+        "B": "It has non-perennial rivers and dry soil",
+        "C": "It is covered with snow",
+        "D": "It has no minerals"
+      },
+      "answer": "B",
+      "explanation": "The Peninsular Plateau has non-perennial rivers and dry soil, making it less fertile than the Indo-Gangetic Plain with its perennial rivers.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the significance of the Bhabar region in the Indo-Gangetic Plain?",
+      "options": {
+        "A": "It is a desert area",
+        "B": "It is a porous belt where rivers go underground",
+        "C": "It is a high plateau",
+        "D": "It is a coral island"
+      },
+      "answer": "B",
+      "explanation": "The Bhabar is a porous belt along the Shiwalik foothills where small rivers go underground, later forming the Terai region.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which feature of the Shiwalik range led to the formation of Duns?",
+      "options": {
+        "A": "High peaks",
+        "B": "River sediments filling lakes",
+        "C": "Volcanic activity",
+        "D": "Coral reefs"
+      },
+      "answer": "B",
+      "explanation": "Rivers from the Himalayas deposited sediments in lakes formed by the Shiwalik range, creating plains called Duns.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "How does India’s location in the Indian Ocean benefit its economy?",
+      "options": {
+        "A": "It provides minerals from the ocean",
+        "B": "It supports trade and fishing",
+        "C": "It prevents all rainfall",
+        "D": "It creates deserts"
+      },
+      "answer": "B",
+      "explanation": "India’s location in the Indian Ocean supports trade routes and fishing, boosting its economy.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "Why is the Chotanagpur Plateau important for India?",
+      "options": {
+        "A": "It has fertile soil for farming",
+        "B": "It is rich in mineral resources",
+        "C": "It has perennial rivers",
+        "D": "It is a coastal area"
+      },
+      "answer": "B",
+      "explanation": "The Chotanagpur Plateau is rich in metallic and non-metallic minerals, important for India’s industries.",
+      "difficulty": "hard"
+    },
+    {
+      "question": "What makes the Andaman and Nicobar Islands unique compared to Lakshadweep?",
+      "options": {
+        "A": "They are made of coral reefs",
+        "B": "They have volcanic origins and submerged mountains",
+        "C": "They are located in the Arabian Sea",
+        "D": "They have no flora or fauna"
+      },
+      "answer": "B",
+      "explanation": "The Andaman and Nicobar Islands are unique due to their volcanic origins and connection to submerged mountains, unlike the coral-based Lakshadweep.",
+      "difficulty": "hard"
     }
   ]
 }
-

@@ -1,5 +1,5 @@
 {
-  "name": "react-tailwind-css-starter-pack",
+  "name": "ughs-quiz-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git"
+    "url": "git+https://github.com/manikanta55/UGHS_QUIZ_APP.git"
   },
-  "author": "Pranay Gupta",
+  "author": "Manikanta Ganji",
   "bugs": {
-    "url": "https://github.com/thepranaygupta/react-tailwind-css-starter-pack/issues"
+    "url": "https://github.com/manikanta55/UGHS_QUIZ_APP/issues"
   },
   "scripts": {
     "start": "react-scripts start",
