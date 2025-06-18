@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import data from '../Socialch1.json';
 import { useDarkMode } from '../DarkModeContext';
 import { useNavigate } from 'react-router-dom';
@@ -68,7 +68,13 @@ function Quiz() {
     setSelected({});
     setShowAnswers(false);
     localStorage.setItem(QUESTIONS_KEY, JSON.stringify(newQuestions));
+    window.scrollTo(0, 0); // Scroll to top after try again
   };
+
+  // Always scroll to top when this page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!hasQuestions) {
     return (
@@ -143,9 +149,13 @@ function Quiz() {
           </div>
         ))}
         {!showAnswers && (
+          // For Submit & Show Answers
           <button
             className={`bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-6 rounded ${!allAnswered ? 'opacity-50 cursor-not-allowed' : ''}`}
-            onClick={() => setShowAnswers(true)}
+            onClick={() => {
+              setShowAnswers(true);
+              window.scrollTo(0, 0); // Scroll to top after submit
+            }}
             disabled={!allAnswered}
           >
             Submit & Show Answers
