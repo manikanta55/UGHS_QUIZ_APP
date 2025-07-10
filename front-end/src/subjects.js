@@ -1,0 +1,31 @@
+export const subjects = {
+  Telugu: [],
+  Hindi: [],
+  English: [],
+  Maths: [],
+  Science: [],
+  Social: [
+    "Chapter 1 - India Relief Features",
+    "Chapter 2 - Ideas of Development",
+    "Chapter 3 - Production and Employment",
+    "Chapter 4 - Climate of India",
+    "Chapter 5 - Indian Rivers and Water Resources",
+    "Chapter 6 - The Population",
+    "Chapter 7 - Settlements - Migrations",
+    "Chapter 8 - Rampur : A Village Economy",
+    "Chapter 9 - Globalisation",
+    "Chapter 10 - Food Security",
+    "Chapter 11 - Sustainable Development with Equity",
+    "Chapter 12 - World Between the World Wars",
+    "Chapter 13 - National Liberation Movements in the Colonies",
+    "Chapter 14 - National Movement in India–Partition & Independence : 1939-1947",
+    "Chapter 15 - The Making of Independent India’s Constitution",
+    "Chapter 16 - Election Process in India",
+    "Chapter 17 - Independent India (The First 30 years - 1947-77)",
+    "Chapter 18 - Emerging Political Trends 1977 to 2000",
+    "Chapter 19 - Post - War World and India",
+    "Chapter 20 - Social Movements in Our Times",
+    "Chapter 21 - The Movement for the Formation of Telangana State"
+  ],
+  
+};

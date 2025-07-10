@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import data from '../Socialch1.json';
 import { useDarkMode } from '../DarkModeContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { subjects } from '../subjects';
 
 // Helper to get random N items from an array
 function getRandomItems(arr, n) {
@@ -30,26 +30,41 @@ const QUESTIONS_KEY = 'quiz_questions';
 function Quiz() {
   const { dark } = useDarkMode();
   const navigate = useNavigate();
-  const hasQuestions = Array.isArray(data.MCQs) && data.MCQs.length >= 1;
+  const { subject, chapterIdx } = useParams();
+  const chapterNames = subjects[subject] || [];
+  const chapterName = chapterNames[chapterIdx];
 
-  // Load from localStorage or generate new
-  const getInitialQuestions = () => {
-    const saved = localStorage.getItem(QUESTIONS_KEY);
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch {
-        // fallback to new questions if parse fails
-      }
-    }
-    const newQuestions = hasQuestions ? getRandomQuestionsByDifficulty(data.MCQs) : [];
-    localStorage.setItem(QUESTIONS_KEY, JSON.stringify(newQuestions));
-    return newQuestions;
-  };
+  const BACKEND_API = `http://127.0.0.1:8000/quizzes/${encodeURIComponent(subject)}/${encodeURIComponent(chapterName)}`;
 
-  const [questions, setQuestions] = useState(getInitialQuestions);
+  const [quizData, setQuizData] = useState(null);
+  const [questions, setQuestions] = useState([]);
   const [selected, setSelected] = useState({});
   const [showAnswers, setShowAnswers] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(BACKEND_API);
+        if (!response.ok) {
+          throw new Error('Failed to fetch quiz data');
+        }
+        const data = await response.json();
+        if (!data || !Array.isArray(data.mcqs)) {
+          throw new Error('Invalid quiz data');
+        }
+        setQuizData(data);
+        const selectedQuestions = getRandomQuestionsByDifficulty(data.mcqs);
+        setQuestions(selectedQuestions);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error loading quiz:', error);
+        navigate('/error'); // Redirect to error page
+      }
+    };
+    fetchData();
+  }, [BACKEND_API, navigate]);
 
   const handleOptionChange = (qIdx, option) => {
     setSelected({ ...selected, [qIdx]: option });
@@ -63,12 +78,50 @@ function Quiz() {
   const allAnswered = questions.length > 0 && questions.every((_, idx) => selected[idx] !== undefined);
 
   const handleTryAgain = () => {
-    const newQuestions = getRandomQuestionsByDifficulty(data.MCQs);
-    setQuestions(newQuestions);
-    setSelected({});
-    setShowAnswers(false);
-    localStorage.setItem(QUESTIONS_KEY, JSON.stringify(newQuestions));
-    window.scrollTo(0, 0); // Scroll to top after try again
+    if (quizData && Array.isArray(quizData.mcqs)) {
+      const newQuestions = getRandomQuestionsByDifficulty(quizData.mcqs);
+      setQuestions(newQuestions);
+      setSelected({});
+      setShowAnswers(false);
+      localStorage.setItem(QUESTIONS_KEY, JSON.stringify(newQuestions));
+      window.scrollTo(0, 0); // Scroll to top after try again
+    }
+  };
+
+  const handleQuizSubmit = async () => {
+    setShowAnswers(true);
+    window.scrollTo(0, 0);
+
+    // Save score to backend
+    const studentName = localStorage.getItem('student_name');
+    const studentRollNo = localStorage.getItem('student_roll_no');
+    const token = localStorage.getItem('token');
+    if (!studentName || !studentRollNo || !token) return;
+
+    try {
+      const response = await fetch('http://127.0.0.1:8000/scores', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          subject,
+          chapter: chapterName,
+          score
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save score');
+      }
+
+      const data = await response.json();
+      console.log('Score saved successfully:', data);
+    } catch (err) {
+      console.error('Failed to save score:', err);
+      // You might want to show an error message to the user
+    }
   };
 
   // Always scroll to top when this page loads
@@ -76,18 +129,41 @@ function Quiz() {
     window.scrollTo(0, 0);
   }, []);
 
-  if (!hasQuestions) {
+  if (loading) {
     return (
-      <div className={`max-w-2xl mx-auto py-8 font-bold ${dark ? 'text-red-400' : 'text-red-600'}`}>
-        No quiz data available.
+      <div className={`min-h-screen flex flex-col items-center justify-center px-2 ${dark ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white' : 'bg-gradient-to-br from-blue-100 via-white to-blue-200 text-gray-900'}`}>
+        <div className="flex flex-col items-center space-y-4">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-gray-900"></div>
+          <p className="text-xl">Loading quiz...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!quizData || !questions.length) {
+    return (
+      <div className={`min-h-screen flex flex-col items-center justify-center px-2 ${dark ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white' : 'bg-gradient-to-br from-blue-100 via-white to-blue-200 text-gray-900'}`}>
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-4">Quiz Not Available</h2>
+          <p className="text-gray-600">Please try again later.</p>
+          <button
+            className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={() => navigate(-1)}
+          >
+            Go Back
+          </button>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className={`min-h-screen w-full ${dark ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'}`}>
-      <div className="max-w-2xl mx-auto py-8">
-        <h2 className={`text-2xl font-bold mb-6`}>India: Relief Features - Quiz</h2>
+    <div className={`min-h-screen flex flex-col items-center justify-center px-2 ${dark ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white' : 'bg-gradient-to-br from-blue-100 via-white to-blue-200 text-gray-900'}`}>
+      <div className="max-w-4xl w-full">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold mb-4">{quizData.subject} - {quizData.chapter} - Quiz</h1>
+          <p className="text-xl text-gray-600">{quizData.description}</p>
+        </div>
         {showAnswers && (
           <>
             <div className="mb-2 text-xl font-semibold text-blue-700 dark:text-blue-300">
@@ -152,10 +228,7 @@ function Quiz() {
           // For Submit & Show Answers
           <button
             className={`bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-6 rounded ${!allAnswered ? 'opacity-50 cursor-not-allowed' : ''}`}
-            onClick={() => {
-              setShowAnswers(true);
-              window.scrollTo(0, 0); // Scroll to top after submit
-            }}
+            onClick={handleQuizSubmit}
             disabled={!allAnswered}
           >
             Submit & Show Answers
@@ -171,9 +244,9 @@ function Quiz() {
             </button>
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded mt-4"
-              onClick={() => navigate('/')}
+              onClick={() => navigate(`/${subject}/chapters`)}
             >
-              Back to Home
+              Back to Chapters
             </button>
           </div>
         )}
