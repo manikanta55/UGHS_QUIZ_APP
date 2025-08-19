@@ -8,12 +8,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Python (back-end)
+# Python
+.venv/
 venv/
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+.DS_Store
 
 # Environment and config files
 .env
@@ -22,6 +23,7 @@ __pycache__/
 
 # VS Code
 .vscode/
+.idea/
 
 # Mac system files
 .DS_Store

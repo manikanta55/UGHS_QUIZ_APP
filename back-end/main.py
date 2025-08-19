@@ -22,6 +22,15 @@ app.add_middleware(
 async def root():
     return {"message": "Welcome to UGHS Quiz App API"}
 
+@app.get("/test-db")
+async def test_db():
+    try:
+        # Test the connection
+        await mcqs_collection.find_one({})
+        return {"status": "success", "message": "Successfully connected to MongoDB!"}
+    except Exception as e:
+        return {"status": "error", "message": f"Database connection failed: {str(e)}"}
+
 @app.get("/quizzes/{subject}/{chapter}")
 async def get_quiz(subject: str, chapter: str):
     doc = await mcqs_collection.find_one({"subject": subject, "chapter": chapter})
