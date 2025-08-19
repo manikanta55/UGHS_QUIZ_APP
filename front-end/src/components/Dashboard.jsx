@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { subjects } from '../subjects';
+
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -56,10 +56,10 @@ function Dashboard() {
     fetchScores();
   }, [navigate]);
 
-  const getLatestScore = (subjectScores, chapter) => {
-    if (!subjectScores || !subjectScores[chapter] || subjectScores[chapter].length === 0) return null;
-    return subjectScores[chapter][subjectScores[chapter].length - 1]; // Get the most recent score for this chapter
-  };
+  // const getLatestScore = (subjectScores, chapter) => {
+  //   if (!subjectScores || !subjectScores[chapter] || subjectScores[chapter].length === 0) return null;
+  //   return subjectScores[chapter][subjectScores[chapter].length - 1]; // Get the most recent score for this chapter
+  // };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-200">
@@ -120,8 +120,8 @@ function Dashboard() {
                         <tbody className="bg-white divide-y divide-gray-200">
                           {Array.isArray(chapterScores) && chapterScores.length > 0 ? (
                             chapterScores.sort((a, b) => new Date(b.date) - new Date(a.date)).map((score, index) => (
-                              <tr key={index} className={`hover:bg-blue-50 ${index % 2 === 0 ? 'bg-gray-50' : ''}`}>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Test {index + 1}</td>
+                              <tr key={score.id || index} className={`hover:bg-blue-50 ${index % 2 === 0 ? 'bg-gray-50' : ''}`}>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Test {chapterScores.length - index}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm">
                                   <span className={`font-bold ${score.score >= 8 ? 'text-green-600' : 'text-yellow-600'}`}>
                                     {score.score}/10
