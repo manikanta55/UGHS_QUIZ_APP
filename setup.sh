@@ -1,14 +1,9 @@
 #!/bin/bash
-
-# Exit on error
 set -e
 
-# Upgrade pip
-echo "🚀 Upgrading pip..."
+echo "🚀 Installing dependencies..."
 pip install --upgrade pip
-
-# Install Python dependencies
-echo "📦 Installing Python dependencies..."
 pip install -r requirements.txt
 
-echo "✅ Setup completed successfully!"
+# Create necessary directories if they don't exist
+mkdir -p logs
