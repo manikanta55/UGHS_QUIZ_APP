@@ -36,3 +36,11 @@ Recently, we identified a more efficient approach to content generation using LL
 <img width="500" height="500" alt="UGHS_Chapter_Quiz_Page" src="https://github.com/user-attachments/assets/e4257ef0-0517-4658-a587-3b42728e5d3d" />
 
 
+## Deployment
+
+Checkout the links :: 
+
+Front-end :: https://ughs-quiz-app.vercel.app/login
+
+Back-end :: https://ughs-quiz-app.onrender.com
+
