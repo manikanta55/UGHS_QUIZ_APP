@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { API_BASE_URL } from '../config'; // Import API base URL
 import { useDarkMode } from '../DarkModeContext';
 import { subjects } from '../subjects';
 
@@ -11,7 +12,7 @@ function ChapterSummary() {
   const chapterNames = subjects[subject] || [];
   const chapterName = chapterNames[chapterIdx];
 
-  const BACKEND_API = `http://127.0.0.1:8000/quizzes/${encodeURIComponent(subject)}/${encodeURIComponent(chapterName)}`;
+  const BACKEND_API = `${API_BASE_URL}/quizzes/${encodeURIComponent(subject)}/${encodeURIComponent(chapterName)}`;
 
   const [summary, setSummary] = useState([]);
   const [loading, setLoading] = useState(true);
