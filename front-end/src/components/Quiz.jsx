@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDarkMode } from '../DarkModeContext';
 import { useNavigate, useParams } from 'react-router-dom';
 import { subjects } from '../subjects';
+import { API_BASE_URL } from '../config';
 
 // Helper to get random N items from an array
 function getRandomItems(arr, n) {
@@ -34,7 +35,7 @@ function Quiz() {
   const chapterNames = subjects[subject] || [];
   const chapterName = chapterNames[chapterIdx];
 
-  const BACKEND_API = `http://127.0.0.1:8000/quizzes/${encodeURIComponent(subject)}/${encodeURIComponent(chapterName)}`;
+  const BACKEND_API = `${API_BASE_URL}/quizzes/${encodeURIComponent(subject)}/${encodeURIComponent(chapterName)}`;
 
   const [quizData, setQuizData] = useState(null);
   const [questions, setQuestions] = useState([]);
@@ -99,7 +100,7 @@ function Quiz() {
     if (!studentName || !studentRollNo || !token) return;
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/scores', {
+      const response = await fetch(`${API_BASE_URL}/scores`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

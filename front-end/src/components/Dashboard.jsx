@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../config'; // Import API base URL
 
 
 function Dashboard() {
@@ -19,7 +20,7 @@ function Dashboard() {
           return;
         }
 
-        const response = await fetch('http://127.0.0.1:8000/scores', {
+        const response = await fetch(`${API_BASE_URL}/scores`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
